@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于EEG信号的脑机接口运动意向识别算法</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>数据管理后台</h1>
+            <button class="logout-btn" id="logoutBtn">退出登录</button>
+        </div>
+        <button class="add-btn" id="showAddFormBtn">添加数据</button>
+        <form class="add-form" id="addForm" style="display:none;">
+            <div class="form-group">
+                <label for="addTitle">标题</label>
+                <input type="text" id="addTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="addDesc">描述</label>
+                <textarea id="addDesc"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="addImages">图片（可多选）</label>
+                <input type="file" id="addImages" multiple accept="image/*">
+            </div>
+            <div class="form-btns">
+                <button type="submit" class="form-btn">提交</button>
+                <button type="button" class="form-btn cancel" id="cancelAddBtn">取消</button>
+            </div>
+            <div class="error-message" id="addError" style="display:none;"></div>
+            <div class="success-message" id="addSuccess" style="display:none;"></div>
+        </form>
+        <div class="data-list" id="dataList"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/admin.js"></script>
+</body>
+</html> 
